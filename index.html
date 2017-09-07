@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mi</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="shortcut icon" href="./fonts/iconfont.css" type="image/x-icon">
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <link rel="stylesheet/less" href="less/index.less">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <header id="header">
+        <div class="w">
+            <ul>
+                <li>
+                    <a href="#">小米商城</a>
+                    <s>|</s>
+                </li>
+                <li><a href="#">MIUI</a>
+                    <s>|</s>
+                </li>
+                <li><a href="#">米聊</a>
+                    <s>|</s>
+                </li>
+                <li><a href="#">游戏</a>
+                    <s>|</s>
+                </li>
+                <li><a href="#">多看阅读</a>
+                    <s>|</s>
+                </li>
+                <li><a href="#">云服务</a>
+                    <s>|</s>
+                </li>
+                <li><a href="#">小米网移动版</a>
+                    <s>|</s>
+                </li>
+                <li><a href="#">问题反馈</a>
+                    <s>|</s>
+                </li>
+                <li><a href="#">Select Region</a></li>
+
+            </ul>
+            <ol>
+                <li><a href="#">登录</a>
+                    <s>|</s>
+                </li>
+                <li> <a href="#">注册</a>
+                </li>
+                <li>
+                    <a href="#"> <i class="icon iconfont icon-gouwuche"></i>购物车(0)</a>
+                    <div class="buycar">购物车中还没有商品，赶快选购吧！</div>
+                </li>
+            </ol>
+
+        </div>
+
+
+    </header>
+
+    <!-- 导航 -->
+    <section class="w clearfix" id="nav">
+        <h1>
+            <a href="#"><img src="./img/logo.png" alt=""></a>
+            <a href="#"><img src="./img/win.gif" alt=""></a>
+        </h1>
+        <!-- ajax获取导航条 -->
+        <ul>
+        </ul>
+        <form class="search">
+            <input type="text">
+            <input type="button">
+            <a href="#">红米pro</a>
+            <a href="#">小米笔记本air</a>
+        </form>
+    </section>
+    <aside id="downNav">
+        <ul class="w clearfix">
+        </ul>
+    </aside>
+    <!-- 轮播 -->
+    <section id="slide" class="w">
+        <!-- ajax获取轮播图 -->
+        <div class="turn">
+            <span class="left">&lt;</span>
+            <span class="right">&gt;</span>
+        </div>
+        <!-- ajax获取轮播导航条 -->
+        <aside class="asideNav">
+        </aside>
+        <article class="articleNav">
+
+        </article>
+    </section>
+    <!-- 小图片 -->
+    <section id="home-hero" class="w">
+        <!--左边  -->
+        <aside>
+            <ul>
+                <li>
+                    <a href="#"> 
+                            <i class="icon iconfont icon-icon31"></i>
+                             <p>选购手机</p>
+                        </a>
+                </li>
+                <li>
+                    <a href="#">
+                            <i class="icon iconfont icon-liwu da"></i>
+                            <p>企业团购</p>
+                        </a>
+                </li>
+                <li>
+                    <a href="#">
+                            <i class="icon iconfont icon-gengxin"></i>
+                            <p>官翻产品</p>
+                        </a>
+                </li>
+                <li>
+                    <a href="#">
+                            <i class="icon iconfont icon-qia"></i>
+                            <p>小米移动</p>
+                        </a>
+                </li>
+                <li>
+                    <a href="#">
+                            <i class="icon iconfont icon-huishou"></i>
+                            <p>以旧换新</p>
+                        </a>
+                </li>
+                <li>
+                    <a href="#">
+                            <i class="icon iconfont icon-chongzhi"></i>
+                            <p>话费充值</p>
+                        </a>
+                </li>
+            </ul>
+        </aside>
+        <article>
+            <a href="#">
+                    <img src="./img/homeHero-01.jpg" alt="">
+                </a>
+            <a href="#">
+                    <img src="./img/homeHero-02.jpg" alt="">
+                </a>
+            <a href="#">
+                    <img src="./img/homeHero-03.jpg" alt="">
+                </a>
+        </article>
+    </section>
+
+    <main id="main">
+        <!--智能硬件  -->
+        <section id="mi-star" class="w clearfix">
+            <!--侧边栏  -->
+            <div class="title clearfix">
+                <h3>智能硬件</h3>
+                <a href="#">
+                    <span>查看全部 <i class="icon iconfont icon-you"></i></span>
+                </a>
+            </div>
+            <aside>
+                <a href="#">
+                    <img src="./img/hardware.jpg" alt="">
+                </a>
+            </aside>
+            <!--主体  -->
+            <article>
+                <ul>
+                    <script type='text/html' id="hardware">
+                        {{each}}
+                        <li>
+                            <p class='recommend {{$value.discountType}}'>{{$value.discount}}</p>
+                            <a href="{{$value.sourceUrl}}"> 
+                            <img alt="" src="{{$value.imgUrl}}"> 
+                            <h3>{{$value.title}}</h3>
+                        </a>
+                            <p class="introduce">{{$value.desc}}</p>
+                            <p class="price">{{$value.price}}元</p>
+                        </li>
+                        {{/each}}
+                    </script>
+                </ul>
+            </article>
+        </section>
+        <!-- 搭配 -->
+        <section id="match" class="w clearfix">
+        </section>
+        <!--搭配模板  -->
+        <script type="text/html" id='matchMoban'>
+            <aside class="title clearfix">
+                <h3>{{topTitleName}}</h3>
+                <p>
+                    {{each subs}}
+                    <span data-key='{{$value.key}}'>{{$value.name}}</span> {{/each}}
+                </p>
+            </aside>
+            <div class='left'>
+                {{each leftGoods}}
+                <a href="{{$value.sourceUrl}}">
+                        <img src="{{$value.imgUrl}}" alt="">
+                    </a> {{/each}}
+            </div>
+            <ul>
+                {{each hotgoods}}
+                <li>
+                    <p class='recommend {{$value.discountType}}'>{{$value.discount}}</p>
+                    <a href="{{$value.sourceUrl}}"> 
+                            <img alt="" src="{{$value.imgUrl}}"> 
+                            <h3>{{$value.title}}</h3>
+                        </a>
+                    <p class="price">{{$value.price}}元</p>
+                    <p class="num">{{$value.heat}}人评价</p>
+                </li>
+                {{/each}}
+                <li>
+                    <a href="#">
+                        <div class="left">
+                            <p>浏览更多</p>
+                            <span>热门</span>
+                        </div>
+                        <div class="right">
+                            <i class='icon iconfont icon-you'></i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </script>
+        <!--搭配Tab模板  -->
+        <script type='text/html' id="match2">
+            {{each datas}}
+            <li>
+                <p class='recommend {{$value.discountType}}'>{{$value.discount}}</p>
+                <a href="{{$value.sourceUrl}}"> 
+                            <img alt="" src="{{$value.imgUrl}}"> 
+                            <h3>{{$value.title}}</h3>
+                        </a>
+                <p class="price">{{$value.price}}元</p>
+                <p class="num">{{$value.heat}}人评价</p>
+            </li>
+            {{/each}}
+            <li>
+                <a href="#">
+                    <div class="left">
+                        <p>浏览更多</p>
+                        <span>热门</span>
+                    </div>
+                    <div class="right">
+                        <i class='icon iconfont icon-you'></i>
+                    </div>
+                </a>
+            </li>
+        </script>
+
+
+        <!-- </section> -->
+        <!-- 配件 -->
+        <section id="accessories" class="w clearfix">
+        </section>
+        <!--配件模板  -->
+        <script type="text/html" id='accessMoban'>
+            <aside class="title clearfix">
+                <h3>{{topTitleName}}</h3>
+                <p>
+                    {{each subs}}
+                    <span data-key='{{$value.key}}'>{{$value.name}}</span> {{/each}}
+                </p>
+            </aside>
+            <div class='left'>
+                {{each leftGoods}}
+                <a href="{{$value.sourceUrl}}">
+                        <img src="{{$value.imgUrl}}" alt="">
+                    </a> {{/each}}
+            </div>
+            <ul>
+                {{each hot}}
+                <li>
+                    <p class='recommend {{$value.discountType}}'>{{$value.discount}}</p>
+                    <a href="{{$value.sourceUrl}}"> 
+                            <img alt="" src="{{$value.imgUrl}}"> 
+                            <h3>{{$value.title}}</h3>
+                        </a>
+                    <p class="price">{{$value.price}}元</p>
+                    <p class="num">{{$value.heat}}人评价</p>
+                </li>
+                {{/each}}
+                <li>
+                    <a href="#">
+                        <div class="left">
+                            <p>浏览更多</p>
+                            <span>热门</span>
+                        </div>
+                        <div class="right">
+                            <i class='icon iconfont icon-you'></i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </script>
+        <!--配件Tab模板  -->
+        <script type='text/html' id="accessMoban2">
+            {{each datas}}
+            <li>
+                <p class='recommend {{$value.discountType}}'>{{$value.discount}}</p>
+                <a href="{{$value.sourceUrl}}"> 
+                            <img alt="" src="{{$value.imgUrl}}"> 
+                            <h3>{{$value.title}}</h3>
+                        </a>
+                <p class="price">{{$value.price}}元</p>
+                <p class="num">{{$value.heat}}人评价</p>
+            </li>
+            {{/each}}
+            <li>
+                <a href="#">
+                    <div class="left">
+                        <p>浏览更多</p>
+                        <span>热门</span>
+                    </div>
+                    <div class="right">
+                        <i class='icon iconfont icon-you'></i>
+                    </div>
+                </a>
+            </li>
+        </script>
+
+        <!-- 周边 -->
+        <section id="ambitus" class="w clearfix">
+        </section>
+
+        <!--周边模板  -->
+        <script type="text/html" id='ambMoban'>
+            <aside class="title clearfix">
+                <h3>{{topTitleName}}</h3>
+                <p>
+                    {{each subs}}
+                    <span data-key='{{$value.key}}'>{{$value.name}}</span> {{/each}}
+                </p>
+            </aside>
+            <div class='left'>
+                {{each leftGoods}}
+                <a href="{{$value.sourceUrl}}">
+                        <img src="{{$value.imgUrl}}" alt="">
+                    </a> {{/each}}
+            </div>
+            <ul>
+                {{each hotcloths}}
+                <li>
+                    <p class='recommend {{$value.discountType}}'>{{$value.discount}}</p>
+                    <a href="{{$value.sourceUrl}}"> 
+                            <img alt="" src="{{$value.imgUrl}}"> 
+                            <h3>{{$value.title}}</h3>
+                        </a>
+                    <p class="price">{{$value.price}}元</p>
+                    <p class="num">{{$value.heat}}人评价</p>
+                </li>
+                {{/each}}
+                <li>
+                    <a href="#">
+                        <div class="left">
+                            <p>浏览更多</p>
+                            <span>热门</span>
+                        </div>
+                        <div class="right">
+                            <i class='icon iconfont icon-you'></i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </script>
+        <!--周边Tab模板  -->
+        <script type='text/html' id="ambMoban2">
+            {{each datas}}
+            <li>
+                <p class='recommend {{$value.discountType}}'>{{$value.discount}}</p>
+                <a href="{{$value.sourceUrl}}"> 
+                            <img alt="" src="{{$value.imgUrl}}"> 
+                            <h3>{{$value.title}}</h3>
+                        </a>
+                <p class="price">{{$value.price}}元</p>
+                <p class="num">{{$value.heat}}人评价</p>
+            </li>
+            {{/each}}
+            <li>
+                <a href="#">
+                    <div class="left">
+                        <p>浏览更多</p>
+                        <span>热门</span>
+                    </div>
+                    <div class="right">
+                        <i class='icon iconfont icon-you'></i>
+                    </div>
+                </a>
+            </li>
+        </script>
+
+        <!-- 推荐 -->
+        <section id="recommendU" class="w clearfix">
+            <aside class="title clearfix">
+                <h3>为你推荐</h3>
+                <p>
+                    <span class="disabled turnLeft">&lt;</span>
+                    <span class="turnRight">&gt;</span>
+                </p>
+            </aside>
+            <article>
+                <!--add   #recomUBanban-->
+                <ul></ul>
+            </article>
+            <!--推荐模板  -->
+            <script type="text/html" id='recomUBanban'>
+                {{each}}
+                <li>
+                    <a href="{{$value.sourceUrl}}"> 
+                            <img alt="" src="{{$value.imgUrl}}"> 
+                            <h3>{{$value.name}}</h3>
+                        </a>
+                    <p class="price">{{$value.price}}元</p>
+                    <p class="num">{{$value.favorable}}人评价</p>
+                </li>
+                {{/each}}
+            </script>
+        </section>
+        <!-- 热评产品 -->
+        <section id="Hot_Comments" class="w">
+            <h3>热评产品</h3>
+            <article>
+                <ul></ul>
+            </article>
+        </section>
+        <!-- 内容 -->
+        <section id="content">
+
+        </section>
+        <!-- 视频 -->
+        <section id="video">
+
+        </section>
+    </main>
+    <!-- 底部 -->
+    <footer style='height:500px'></footer>
+    <script src='js/jquery-1.12.4.js'></script>
+    <script src="lib/less/less.js"></script>
+    <script src="./js/template.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
+<!-- 导航模板 -->
+<script type="text/html" id="navItems">
+    {{each}}
+    <li type="{{$value.type}}">
+        <a href="#">{{$value.name}}</a>
+    </li>
+    {{/each}}
+
+</script>
+<!-- 导航下拉模板 -->
+<script type='text/html' id='navContent'>
+    {{each}}
+    <li>
+        <a href="#"><img src="{{$value.imgUrl}}"></a>
+        <p>{{$value.name}}</p>
+        <font>{{$value.price}}</font>
+    </li>
+    <s></s>
+    {{/each}}
+</script>
+
+<!-- 轮播模板 -->
+<script type="text/html" id='slidePic'>
+    {{each}}
+    <a href="{{$value.sourceUrl}}"><img src=" {{$value.imgUrl}} " alt=" "></a> {{/each}}
+</script>
+<!-- 轮播侧边导航模板 -->
+<script type='text/html' id="asideNav">
+    <ul>
+        {{each}}
+        <li data-type='{{$value.type}}'>{{$value.content}}</li>
+        {{/each}}
+    </ul>
+</script>
+<!-- 轮播侧边导航内容模板 articleNav-->
+<script type='text/html' id="articleNav">
+    <ul>
+        {{each}}
+        <li><a href="{{$value.sourceUrl}}"><img src="{{$value.imgUrl}}"><span>{{$value.name}}</span></a><button class='{{$value.buyStatus}}'>选购</button></li>
+        {{/each}}
+    </ul>
+</script>
